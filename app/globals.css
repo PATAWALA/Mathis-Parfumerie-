@@ -11,8 +11,8 @@
   --color-gold-light: #e8ce7f;
   --color-cream: #f5f0e6;
 
-  /* Fonts (branchées sur les variables Next/font) */
-  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  /* Fonts */
+  --font-serif: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   /* Animations */
