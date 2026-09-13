@@ -34,15 +34,24 @@ export default function Navbar() {
       )}
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex flex-col leading-none">
-          <span className="font-serif text-xl md:text-2xl gold-text tracking-wide">
-            MATHIS
-          </span>
-          <span className="text-[10px] tracking-[0.35em] text-gold-soft/80 uppercase">
-            Parfumerie · Dubaï & Inde
+        {/* LOGO */}
+        <a href="#" className="flex items-center gap-3 shrink-0">
+          <img
+            src="/logo.jpeg"
+            alt="Mathis Parfumerie"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
+          <span className="hidden sm:flex flex-col leading-none">
+            <span className="font-serif text-lg md:text-xl gold-text tracking-wide">
+              MATHIS
+            </span>
+            <span className="text-[9px] tracking-[0.3em] text-gold-soft/80 uppercase">
+              Parfumerie · Dubaï & Inde
+            </span>
           </span>
         </a>
 
+        {/* LIENS */}
         <ul className="hidden lg:flex items-center gap-10 text-sm tracking-wide">
           {links.map((l) => (
             <li key={l.href}>
@@ -56,6 +65,7 @@ export default function Navbar() {
           ))}
         </ul>
 
+        {/* PANIER + MENU MOBILE */}
         <div className="flex items-center gap-4">
           <button
             onClick={openCart}
