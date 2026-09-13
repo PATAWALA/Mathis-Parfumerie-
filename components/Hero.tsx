@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Sparkles, Phone, Mail, User } from "lucide-react";
+import { Sparkles, Phone, Mail, User, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
   const [form, setForm] = useState({
@@ -17,7 +17,7 @@ export default function Hero() {
     e.preventDefault();
     setSent(true);
     const msg = encodeURIComponent(
-      `Bonjour Mathis 👋\n\nJe souhaite réserver un appel de lancement pour mon projet de parfumerie.\n\n👤 Nom: ${form.name}\n📞 Téléphone: ${form.phone}\n📧 Email: ${form.email}\n🎯 Projet: ${form.project}`
+      `Bonjour Mathis 👋\n\nJe souhaite l'analyse de mon dossier.\n\n👤 ${form.name}\n📞 ${form.phone}\n📧 ${form.email}\n🎯 ${form.project}`
     );
     window.open(`https://wa.me/?text=${msg}`, "_blank");
   };
@@ -34,11 +34,10 @@ export default function Hero() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/70 to-noir/40" />
-        <div className="absolute top-1/3 -left-20 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 -right-20 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        {/* COPY */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,109 +46,119 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/30 bg-gold/5 mb-6">
             <Sparkles className="w-3.5 h-3.5 text-gold" />
             <span className="text-xs tracking-[0.25em] uppercase text-gold">
-              Accompagnement Premium
+              Analyse offerte
             </span>
           </div>
 
           <h1 className="font-serif text-4xl md:text-6xl xl:text-7xl leading-[1.05] mb-6">
-            Lancez Votre Propre
+            Lancez votre
             <br />
             <span className="gold-text">Marque de Parfums</span>
             <br />
-            depuis Dubaï & l'Inde.
+            Dubaï & Inde.
           </h1>
 
-          <p className="text-cream/70 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-            Accédez aux meilleurs fournisseurs, créez votre gamme sur-mesure et
-            réservez votre accompagnement personnalisé dès aujourd'hui.
+          <p className="text-cream/70 text-lg max-w-xl mb-8 leading-relaxed">
+            Envoyez votre projet. Analyse gratuite sous 24h.
           </p>
 
-          <div className="flex flex-wrap gap-6 text-sm text-cream/60">
-            {["Sourcing direct usine", "Livraison internationale", "Clé en main"].map(
-              (t) => (
-                <div key={t} className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gold" />
-                  {t}
-                </div>
-              )
-            )}
+          <div className="space-y-3">
+            {[
+              "Étude personnalisée de votre projet",
+              "Fournisseurs directs Dubaï & Inde",
+              "Devis clair, sans engagement",
+            ].map((t) => (
+              <div key={t} className="flex items-center gap-3 text-sm text-cream/80">
+                <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
+                {t}
+              </div>
+            ))}
           </div>
         </motion.div>
 
+        {/* FORMULAIRE */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
           className="glass gold-border-glow rounded-2xl p-8 md:p-10"
         >
-          <h3 className="font-serif text-2xl mb-1">Réservez votre appel</h3>
-          <p className="text-sm text-cream/60 mb-8">
-            Réponse sous 24h — Créneaux limités cette semaine.
-          </p>
-
           {sent ? (
             <div className="text-center py-10">
               <div className="w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center mx-auto mb-4">
                 <Sparkles className="w-7 h-7 text-gold" />
               </div>
-              <p className="font-serif text-xl gold-text mb-2">
-                Demande envoyée
-              </p>
+              <p className="font-serif text-xl gold-text mb-2">Dossier reçu ✅</p>
               <p className="text-sm text-cream/60">
-                Nous vous contactons très vite sur WhatsApp.
+                Réponse sous 24h sur WhatsApp.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <Field
-                icon={<User className="w-4 h-4" />}
-                placeholder="Nom complet"
-                value={form.name}
-                onChange={(v) => setForm({ ...form, name: v })}
-              />
-              <Field
-                icon={<Phone className="w-4 h-4" />}
-                placeholder="Téléphone / WhatsApp"
-                value={form.phone}
-                onChange={(v) => setForm({ ...form, phone: v })}
-              />
-              <Field
-                icon={<Mail className="w-4 h-4" />}
-                placeholder="Email"
-                type="email"
-                value={form.email}
-                onChange={(v) => setForm({ ...form, email: v })}
-              />
+            <>
+              <div className="flex items-center gap-3 mb-6 pb-5 border-b border-gold/15">
+                <img
+                  src="/mathis.jpg"
+                  alt="Mathis"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-gold/50"
+                />
+                <div>
+                  <p className="text-sm font-medium">Mathis</p>
+                  <p className="text-[11px] text-cream/50">Sourcing Dubaï & Inde</p>
+                </div>
+                <span className="ml-auto w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              </div>
 
-              <div>
-                <label className="block text-xs uppercase tracking-widest text-gold/80 mb-2">
-                  Votre projet
-                </label>
+              <h3 className="font-serif text-2xl mb-2">
+                Analyse de votre dossier
+              </h3>
+              <p className="text-sm text-cream/60 mb-6">
+                Réponse sous 24h · Confidentiel
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <Field
+                  icon={<User className="w-4 h-4" />}
+                  placeholder="Nom complet"
+                  value={form.name}
+                  onChange={(v) => setForm({ ...form, name: v })}
+                />
+                <Field
+                  icon={<Phone className="w-4 h-4" />}
+                  placeholder="Téléphone / WhatsApp"
+                  value={form.phone}
+                  onChange={(v) => setForm({ ...form, phone: v })}
+                />
+                <Field
+                  icon={<Mail className="w-4 h-4" />}
+                  placeholder="Email"
+                  type="email"
+                  value={form.email}
+                  onChange={(v) => setForm({ ...form, email: v })}
+                />
+
                 <select
                   value={form.project}
-                  onChange={(e) =>
-                    setForm({ ...form, project: e.target.value })
-                  }
-                  className="w-full bg-noir-card/70 border border-gold/20 rounded-lg px-4 py-3 text-cream focus:outline-none focus:border-gold transition-colors"
+                  onChange={(e) => setForm({ ...form, project: e.target.value })}
+                  className="w-full bg-noir-card/70 border border-gold/20 rounded-lg px-4 py-3 text-cream focus:outline-none focus:border-gold"
                 >
                   <option>Lancement rapide</option>
                   <option>Fournisseurs Dubaï</option>
                   <option>Fournisseurs Inde</option>
                   <option>Gamme complète</option>
                 </select>
-              </div>
 
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-gold-soft via-gold to-gold-soft text-noir font-semibold tracking-wide py-4 rounded-lg hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all animate-gold-pulse"
-              >
-                Réserver mon Appel de Lancement
-              </button>
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-gold-soft via-gold to-gold-soft text-noir font-semibold py-4 rounded-lg hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all animate-gold-pulse"
+                >
+                  Analyser mon Dossier
+                </button>
 
-              <p className="text-[11px] text-center text-cream/40">
-                🔒 Vos données restent confidentielles.
-              </p>
-            </form>
+                <p className="text-[11px] text-center text-cream/40">
+                  🔒 Confidentiel · Sans engagement
+                </p>
+              </form>
+            </>
           )}
         </motion.div>
       </div>
@@ -181,7 +190,7 @@ function Field({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full bg-noir-card/70 border border-gold/20 rounded-lg pl-11 pr-4 py-3.5 text-cream placeholder:text-cream/40 focus:outline-none focus:border-gold transition-colors"
+        className="w-full bg-noir-card/70 border border-gold/20 rounded-lg pl-11 pr-4 py-3.5 text-cream placeholder:text-cream/40 focus:outline-none focus:border-gold"
       />
     </div>
   );

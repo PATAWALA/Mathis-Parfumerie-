@@ -14,7 +14,7 @@ export const products: Product[] = [
     name: "Oud Royal Dubaï",
     origin: "Dubaï",
     notes: ["Oud", "Ambre", "Safran"],
-    price: 189,
+    price: 124000,
     image:
       "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80",
     badge: "Provenance Dubaï",
@@ -24,7 +24,7 @@ export const products: Product[] = [
     name: "Rose Taïf Impérial",
     origin: "Dubaï",
     notes: ["Rose", "Vanille", "Musc"],
-    price: 165,
+    price: 108000,
     image:
       "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=80",
     badge: "Provenance Dubaï",
@@ -34,7 +34,7 @@ export const products: Product[] = [
     name: "Attar Mysore Sandal",
     origin: "Inde",
     notes: ["Santal", "Vétiver", "Cèdre"],
-    price: 210,
+    price: 138000,
     image:
       "https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=800&q=80",
     badge: "Provenance Inde",
@@ -44,7 +44,7 @@ export const products: Product[] = [
     name: "Kannauj Jasmine Attar",
     origin: "Inde",
     notes: ["Jasmin", "Fleur d'oranger", "Musc blanc"],
-    price: 175,
+    price: 115000,
     image:
       "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80",
     badge: "Provenance Inde",
@@ -54,7 +54,7 @@ export const products: Product[] = [
     name: "Amber Noir Prestige",
     origin: "Dubaï",
     notes: ["Ambre", "Oud", "Vanille"],
-    price: 199,
+    price: 130000,
     image:
       "https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=800&q=80",
     badge: "Provenance Dubaï",
@@ -64,7 +64,7 @@ export const products: Product[] = [
     name: "Coffret Lancement Signature",
     origin: "Coffret",
     notes: ["Oud", "Rose", "Santal", "Musc"],
-    price: 490,
+    price: 321000,
     image:
       "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=800&q=80",
     badge: "Coffret Exclusif",
@@ -74,7 +74,7 @@ export const products: Product[] = [
     name: "Musk Al Haram",
     origin: "Dubaï",
     notes: ["Musc blanc", "Ambre", "Bois de santal"],
-    price: 155,
+    price: 102000,
     image:
       "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=800&q=80",
     badge: "Provenance Dubaï",
@@ -84,7 +84,7 @@ export const products: Product[] = [
     name: "Vétiver Sacré Inde",
     origin: "Inde",
     notes: ["Vétiver", "Terre", "Poivre noir"],
-    price: 180,
+    price: 118000,
     image:
       "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=800&q=80",
     badge: "Provenance Inde",

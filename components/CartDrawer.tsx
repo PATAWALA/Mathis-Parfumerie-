@@ -16,13 +16,18 @@ export default function CartDrawer() {
 
   const handleWhatsApp = () => {
     const lines = items.map(
-      (i) => `• ${i.name} — ${i.quantity} × ${i.price}€ = ${i.quantity * i.price}€`
+      (i) =>
+        `• ${i.name} — ${i.quantity} × ${i.price.toLocaleString(
+          "fr-FR"
+        )} FCFA = ${(i.quantity * i.price).toLocaleString("fr-FR")} FCFA`
     );
     const total = totalPrice();
     const message = encodeURIComponent(
       `Bonjour 👋\n\nJe souhaite valider ma commande Mathis Parfumerie :\n\n${lines.join(
         "\n"
-      )}\n\n💰 Total : ${total}€\n\nMerci de me confirmer la disponibilité et les modalités de livraison.`
+      )}\n\n💰 Total : ${total.toLocaleString(
+        "fr-FR"
+      )} FCFA\n\nMerci de me confirmer la disponibilité et les modalités de livraison.`
     );
     window.open(`https://wa.me/?text=${message}`, "_blank");
   };
@@ -96,7 +101,9 @@ export default function CartDrawer() {
                           <Trash2 className="w-4 h-4" />
                         </button>
                       </div>
-                      <p className="text-xs text-gold mb-3">{item.price} €</p>
+                      <p className="text-xs text-gold mb-3">
+                        {item.price.toLocaleString("fr-FR")} FCFA
+                      </p>
                       <div className="flex items-center justify-between border border-gold/20 rounded-lg w-fit">
                         <button
                           onClick={() =>
@@ -133,7 +140,7 @@ export default function CartDrawer() {
                     Sous-total
                   </span>
                   <span className="font-serif text-3xl gold-text">
-                    {totalPrice()} €
+                    {totalPrice().toLocaleString("fr-FR")} FCFA
                   </span>
                 </div>
                 <button

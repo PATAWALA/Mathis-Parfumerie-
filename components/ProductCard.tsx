@@ -47,9 +47,9 @@ export default function ProductCard({ product }: { product: Product }) {
 
         <div className="flex items-baseline justify-between mb-5">
           <span className="font-serif text-2xl gold-text">
-            {product.price} €
-          </span>
-          <span className="text-[11px] text-cream/40">/ unité</span>
+  {product.price.toLocaleString("fr-FR")} FCFA
+</span>
+<span className="text-[11px] text-cream/40">/ unité</span>
         </div>
 
         <div className="flex items-center justify-between border border-gold/20 rounded-lg mb-4">
