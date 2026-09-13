@@ -20,7 +20,7 @@ export default function CartDrawer() {
     );
     const total = totalPrice();
     const message = encodeURIComponent(
-      `Bonjour Mathis 👋\n\nJe souhaite valider ma commande PATAWALA :\n\n${lines.join(
+      `Bonjour 👋\n\nJe souhaite valider ma commande Mathis Parfumerie :\n\n${lines.join(
         "\n"
       )}\n\n💰 Total : ${total}€\n\nMerci de me confirmer la disponibilité et les modalités de livraison.`
     );

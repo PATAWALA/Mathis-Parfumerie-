@@ -17,7 +17,7 @@ export default function Hero() {
     e.preventDefault();
     setSent(true);
     const msg = encodeURIComponent(
-      `Bonjour Mathis, je souhaite réserver un appel de lancement.\n\nNom: ${form.name}\nTéléphone: ${form.phone}\nEmail: ${form.email}\nProjet: ${form.project}`
+      `Bonjour Mathis 👋\n\nJe souhaite réserver un appel de lancement pour mon projet de parfumerie.\n\n👤 Nom: ${form.name}\n📞 Téléphone: ${form.phone}\n📧 Email: ${form.email}\n🎯 Projet: ${form.project}`
     );
     window.open(`https://wa.me/?text=${msg}`, "_blank");
   };

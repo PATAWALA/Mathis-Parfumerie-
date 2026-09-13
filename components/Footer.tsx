@@ -8,10 +8,13 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 mb-12">
         <div>
-          <h4 className="font-serif text-2xl gold-text mb-4">PATAWALA</h4>
+          <h4 className="font-serif text-2xl gold-text mb-4">
+            MATHIS PARFUMERIE
+          </h4>
           <p className="text-sm text-cream/60 leading-relaxed">
-            Partenaire officiel de Mathis Parfumerie. Accompagnement premium
-            pour le lancement de votre marque de parfums depuis Dubaï & l'Inde.
+            Accompagnement premium pour le lancement de votre marque de parfums
+            depuis Dubaï & l'Inde. Sourcing direct, gamme sur-mesure, livraison
+            internationale.
           </p>
         </div>
 
@@ -20,9 +23,21 @@ export default function Footer() {
             Navigation
           </h5>
           <ul className="space-y-3 text-sm text-cream/60">
-            <li><a href="#catalogue" className="hover:text-gold">Catalogue</a></li>
-            <li><a href="#offres" className="hover:text-gold">Offres de Lancement</a></li>
-            <li><a href="#avis" className="hover:text-gold">Avis Clients</a></li>
+            <li>
+              <a href="#catalogue" className="hover:text-gold">
+                Catalogue
+              </a>
+            </li>
+            <li>
+              <a href="#offres" className="hover:text-gold">
+                Offres de Lancement
+              </a>
+            </li>
+            <li>
+              <a href="#avis" className="hover:text-gold">
+                Avis Clients
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -44,7 +59,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-gold" />
-              contact@patawala.com
+              contact@mathis-parfumerie.com
             </li>
             <li className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-gold" />
@@ -55,8 +70,10 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-gold/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/40">
-        <p>© {new Date().getFullYear()} PATAWALA × Mathis Parfumerie. Tous droits réservés.</p>
-        <p>Site conçu pour la démonstration client — patawala.com</p>
+        <p>
+          © {new Date().getFullYear()} Mathis Parfumerie. Tous droits réservés.
+        </p>
+        <p>Accompagnement Lancement — Dubaï & Inde</p>
       </div>
     </footer>
   );
